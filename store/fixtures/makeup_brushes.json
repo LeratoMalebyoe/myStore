@@ -1,0 +1,87 @@
+[
+{
+    "model": "store.category",
+    "pk": 1,
+    "fields": {
+    "name": "Makeup Brushes"
+    }
+},
+{
+    "model": "store.product",
+    "pk": 1,
+    "fields": {
+    "name": "Foundation Brush",
+    "description": "Soft synthetic brush perfect for applying foundation.",
+    "price": "120.00",
+    "stock": 15,
+    "image": null,
+    "featured": true,
+    "category": 1
+    }
+},
+{
+    "model": "store.product",
+    "pk": 2,
+    "fields": {
+    "name": "Blush Brush",
+    "description": "Fluffy brush ideal for applying blush evenly.",
+    "price": "90.00",
+    "stock": 20,
+    "image": null,
+    "featured": false,
+    "category": 1
+    }
+},
+{
+    "model": "store.product",
+    "pk": 3,
+    "fields": {
+    "name": "Eyeshadow Brush",
+    "description": "Small, precise brush for perfect eyeshadow application.",
+    "price": "70.00",
+    "stock": 25,
+    "image": null,
+    "featured": false,
+    "category": 1
+    }
+},
+{
+    "model": "store.product",
+    "pk": 4,
+    "fields": {
+    "name": "Concealer Brush",
+    "description": "Flat brush designed to cover blemishes and dark circles.",
+    "price": "85.00",
+    "stock": 10,
+    "image": null,
+    "featured": true,
+    "category": 1
+    }
+},
+{
+    "model": "store.product",
+    "pk": 5,
+    "fields": {
+    "name": "Contour Brush",
+    "description": "Angled brush for precise contouring and shading.",
+    "price": "110.00",
+    "stock": 12,
+    "image": null,
+    "featured": false,
+    "category": 1
+    }
+},
+{
+    "model": "store.product",
+    "pk": 6,
+    "fields": {
+    "name": "Powder Brush",
+    "description": "Large fluffy brush for setting powder.",
+    "price": "95.00",
+    "stock": 18,
+    "image": null,
+    "featured": false,
+    "category": 1
+    }
+}
+]

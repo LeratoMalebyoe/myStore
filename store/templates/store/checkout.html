@@ -1,0 +1,11 @@
+{% extends 'store/base.html' %}
+{% block content %}
+{% if order %}
+    <h2>Thanks! Your order {{ order.id }} has been created.</h2>
+    <p>We would normally process payment and send confirmation.</p>
+{% else %}
+    <h2>Checkout</h2>
+    <p>Confirm your order by clicking below.</p>
+    <form method="post">{% csrf_token %}<button class="btn btn-success">Confirm Order</button></form>
+{% endif %}
+{% endblock %}

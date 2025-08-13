@@ -1,0 +1,28 @@
+{% extends 'store/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container mt-5">
+<div class="row">
+    {% for product in products %}
+    <div class="col-md-4 mb-4">
+        <div class="card product-card text-white bg-dark border-secondary">
+        {% if product.image %}
+            <img src="{{ product.image.url }}" alt="{{ product.name }}" class="card-img-top">
+        {% else %}
+            <img src="{% static 'images/default-product.jpg' %}" alt="No Image" class="card-img-top">
+        {% endif %}
+        <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">R{{ product.price }}</p>
+            <a href="{% url 'store:add_to_cart' product.id %}" class="btn btn-primary">Add to cart</a>
+
+        </div>
+        </div>
+    </div>
+    {% empty %}
+    <p>No products available.</p>
+    {% endfor %}
+</div>
+</div>
+{% endblock %}

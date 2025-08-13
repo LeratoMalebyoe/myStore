@@ -1,0 +1,25 @@
+{% extends 'store/base.html' %}
+
+{% block content %}
+<h2>Your Cart</h2>
+{% if items %}
+    <table class="table">
+        <thead>
+            <tr><th>Product</th><th>Qty</th><th>Subtotal</th></tr>
+        </thead>
+        <tbody>
+            {% for it in items %}
+            <tr>
+                <td>{{ it.name }}</td>
+                <td>{{ it.quantity }}</td>
+                <td>R{{ it.subtotal }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <p class="lead">Total: R{{ total }}</p>
+    <a href="{% url 'store:checkout' %}" class="btn btn-primary">Checkout</a>
+{% else %}
+    <p>Your cart is empty.</p>
+{% endif %}
+{% endblock %}
