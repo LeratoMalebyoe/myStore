@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pdb
+*.egg-info/
+.env
+*.sqlite3
+
+# Virtual Environments
+venv/
+env/
+ENV/
+.venv/
+
+# Django specific
+*.log
+media/
+staticfiles/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+
+# Sphinx build
+docs/_build/
