@@ -4,12 +4,14 @@ from . import views
 app_name = 'store'
 
 urlpatterns = [
+    # Home page displaying all products
     path('', views.home, name='home'),
+
+    # Product listing page
     path('products/', views.product_list, name='products'),
+
+    # Product detail page with slug-based URL
     path('products/<slug:slug>/', views.product_detail, name='product_detail'),
-    path('add-to-cart/<int:product_id>/', views.add_to_cart, name='add_to_cart'),
-    path('cart/', views.cart_view, name='cart'),
-    path('checkout/', views.checkout, name='checkout'),
-    path('signup/', views.signup, name='signup'),
-    path('profile/', views.profile, name='profile'),
+
+    # Add a product to the cart
 ]
